@@ -105,7 +105,7 @@ Vtimedinsert
 p42
 sbsa(dp43
 g12
-I01
+I00
 sg13
 (lp44
 I570
@@ -155,7 +155,7 @@ Tiddler
 p57
 (dp58
 g18
-VYou are in bed.\u000a\u000aThat's not surprising. You've spent so much of your time in bed recently. You feel so heavy, and your voice feels so soft. Inside you Mourazov has been speaking harshly of your cowardice, but that only makes you more afraid. You tremble at the sight of your quill. You rarely get up, except when [[Father Matvei]] is here.\u000a\u000aNine days from now, you'll die, but even if you knew it would give you no solace.
+VYou are in bed.\u000a\u000aThat's not surprising. You've spent so much of your time in bed recently. You feel so heavy, and your voice feels so soft. Inside you Murazov has been speaking harshly of your cowardice, but that only makes you more afraid. You tremble at the sight of your quill. You rarely get up, except when [[Father Matvei]] is here.\u000a\u000aNine days from now, you'll die, but even if you knew it would give you no solace.
 p59
 sg20
 (lp60
@@ -229,7 +229,7 @@ Tiddler
 p79
 (dp80
 g18
-VMurder of a Dead Soul
+VDead Soul
 p81
 sg20
 (lp82
@@ -340,7 +340,7 @@ Tiddler
 p112
 (dp113
 g18
-VFather Matvei hates your book. You published the first half ten years ago. At the time you thought it was your greatest achievement - the culmination of your skill - your epic. But it was incomplete. You had written the fall of man; you needed to write about man's redemption.\u000a\u000aYou have been working on the second half for ten years now, but Father Matvei has been increasingly harsh in his criticisms. It is not through the words of man, he says, that man will find redemption.\u000a\u000aFinally, last night, he gave you his ultimatum. To repair your relationship with God, the manuscript must [[burn]].
+VFather Matvei hates your book. You published the first half ten years ago. At the time you thought it was your greatest achievement - the culmination of your skill - your epic. But it was incomplete. You had written the fall of man; you needed to write man's redemption.\u000a\u000aYou have been working on the second half for ten years now, but Father Matvei has been increasingly harsh in his criticisms. It is not through the words of man, he says, that man will find redemption.\u000a\u000aFinally, last night, he gave you his ultimatum. To repair your relationship with God, the manuscript must [[burn]].
 p114
 sg20
 (lp115
@@ -451,7 +451,7 @@ Tiddler
 p145
 (dp146
 g18
-VThe fire winks at you complicitly. The flames leap up as if to greet you, to plead you to come closer. It knows what you're about to do, it thinks it's okay, that it's not your fault. It can be your secret. The fire's beckoning makes you feel as though your hands are magnetically drawn to it, though you know you're not moving.\u000a\u000aThe flames' seductive reassurances contrast in your mind with the stern orders of Father Matvei and the pleading of Mourazav, whose mental arguments have paralyzed you in the [[sleepless hours|You fail.]] since you met with Matvei last night.
+VThe fire winks at you complicitly. The flames leap up as if to greet you, to plead you to come closer. It knows what you're about to do, it thinks it's okay, that it's not your fault. It can be your secret. The fire's beckoning makes you feel as though your hands are magnetically drawn to it, though you know you're not moving.\u000a\u000aThe flames' seductive reassurances contrast in your mind with the stern orders of Father Matvei and the pleading of Murazov, whose mental arguments have paralyzed you in the [[sleepless hours|You fail.]] since you met with Matvei last night.
 p147
 sg20
 (lp148
@@ -562,7 +562,7 @@ Tiddler
 p178
 (dp179
 g18
-VYou hardly notice when you toss the papers on the fire, only coming to when the crackling sound and the smell of your work strike you out of the disassociative stupor.\u000a\u000aTentetnikov ever the fatalist is the first to go, going down with the ship as the first flames seductively coil themselves around the edges of the page. He hardly seems to react even as he's being pulled down, more interested in himself than in his surroundings. Surely he wonders to himself how his life could have been better, how this catastrophe could have been avoided, but it's anyone's fault but his own. Perhaps just maybe had he had that wonderful teacher in his youth...\u000a\u000aThe question remains unanswered as his face drops below the flames. They consume Tentetnikov, his teacher, and his unwritten work [[together]].
+VYou hardly notice when you toss the papers on the fire, only coming to when the crackling sound and the smell of your work strike you out of the disassociative stupor.\u000a\u000aTentetnikov ever the fatalist is the first to go, going down with the ship as the first flames seductively coil themselves around the edges of the page. He hardly seems to react even as he's being pulled down, more interested in himself than in his surroundings. Surely he wonders to himself how his life could have been better, how this catastrophe could have been avoided, as he rationalizes that it's anyone's fault but his own. Perhaps just maybe had he had that wonderful teacher in his youth...\u000a\u000aThe question remains unanswered as his face drops below the flames. What could have been burns as well as what is. The fire consumes Tentetnikov, his teacher, and his unwritten work [[together]].
 p180
 sg20
 (lp181
@@ -599,7 +599,7 @@ Tiddler
 p189
 (dp190
 g18
-VYour vision fills with red, red, red, blurring and seeming to overlap everything else around you. You blink to clear your vision but the afterimage still seems to fill the room.
+VYour vision fills with red, red, red, blurring and seeming to overlap everything else around you. You blink to clear your vision but the afterimage still seems to fill the room. Even in phantom form the fire's [[conspiratorial flames|terrible task]] haunt you.
 p191
 sg20
 (lp192
@@ -623,7 +623,192 @@ g196
 sg29
 Vfire
 p197
-sbsasS'scale'
-p198
+sbsa(dp198
+g12
+I00
+sg13
+(lp199
+F150.0
+aF990.0
+asg15
+(itiddlywiki
+Tiddler
+p200
+(dp201
+g18
+VAfter a sequence of generals and daughters and landowners through which you can hardly pay attention comes Kostanjoglo, the scientist-farmer, so busy planning his estate \u2014 eyes down that is on the earth \u2014 that he hadn't even noticed the fire until the first flame snatches him. Now he looks up in shock the plans on his desk already reduced to a pile of ash. All around him his crops are burning with their smoke smudging out the next words on the page you hold in your hand.\u000a\u000aHe rushes out to organize his serfs only to find that they are already burned, their village so far gone not even ashes remain to tell where it once stood. Indeed in another moment with the immolation of Kostanjoglo himself perhaps there will stand no further record that there once existed a Kostanjoglo [[at all|Murazov]].
+p202
+sg20
+(lp203
+sg22
+g23
+((I2013
+I4
+I29
+I22
+I22
+I12
+I0
+I119
 I1
+tp204
+(dp205
+tp206
+Rp207
+sg28
+g207
+sg29
+Vtogether
+p208
+sbsa(dp209
+g12
+I00
+sg13
+(lp210
+F150.0
+aF1270.0
+asg15
+(itiddlywiki
+Tiddler
+p211
+(dp212
+g18
+VFinally you reach Chichikov himself, who looks up at you with shock as he finds himself cast upon the flames. He has watched your purge with a kind of distant curiosity, as though it was some faraway story he had once read about in a French novel; with as much relevance to his life perhaps as the death of the prosecutor. No doubt the thought crossed his mind that somewhere among these deaths he could stand to profit. To find himself here staring up at you who alone stand to rend judgement over him is a thing so shocking that for a few moments he hardly seems to be capable of fitting it inside his head.\u000a\u000aHe screams for pity, reaches up an arm to you for salvation, and though for a moment your breaking heart is ready to grant him salvation the rest of your manuscript is filled, filled to the brim with dead souls without the slightest purchase for Chichikov. The long long list of the Mikheyevs and the Probkas and the Milushkins and the Maxims and the Yeremeys which once seemed so very much like his salvation were nothing more than dead weights pushing him further and further into the fire.\u000a\u000aAfter a very long time under the flames, Chichikov invokes the strength to reach up one last time, fingers scrambling against the pages for some kind of a hold, then slips away and is [[gone]].
+p213
+sg20
+(lp214
+sg22
+g23
+((I2013
+I4
+I29
+I22
+I22
+I21
+I0
+I119
+I1
+tp215
+(dp216
+tp217
+Rp218
+sg28
+g218
+sg29
+Vat all
+p219
+sbsa(dp220
+g12
+I00
+sg13
+(lp221
+F150.0
+aF1130.0
+asg15
+(itiddlywiki
+Tiddler
+p222
+(dp223
+g18
+VLong before you actually reach him the voice of Murazov has been quietly pleading with you to stop, to rethink things. His voice is one half of the argument which has played itself out in your head without stop since Father Matvei left last night, assuring you that he knows what a good man you could be, to forget your plot \u2014 you know, he implores you, that you won't find peace in that, your enemy, your tempter, your betrayer.\u000a\u000aAnd indeed, Father Matvei's voice seems now so very soft where only a few minutes ago his commands made all the world ring. But your hands move mechanically and continue to feed the fire not anymore of your own accord but quite automatically. Murazov's voice too now grows softer under the load of the papers taken alight all around him, quite indistinct when surrounded by all the flame and smoke of Navarino.\u000a\u000aAs at last his features become obscured by the fire you realize that in the end you never knew much about Murazov [[at all]].
+p224
+sg20
+(lp225
+sg22
+g23
+((I2013
+I5
+I5
+I20
+I23
+I36
+I6
+I125
+I1
+tp226
+(dp227
+tp228
+Rp229
+sg28
+g229
+sg29
+VMurazov
+p230
+sbsa(dp231
+g12
+I00
+sg13
+(lp232
+F150.0
+aF1550.0
+asg15
+(itiddlywiki
+Tiddler
+p233
+(dp234
+g18
+V<<timedinsert 3s>>Anything can happen to a man: the fiery youth of today would recoil in horror if one were to show him his portrait in old age. So, as you pass from the tender years of youth into harsh and embittered manhood, make sure you take with you on your journey all the human emotions! Don't leave them on the road, for you will not pick them up afterwards! Old age, inevitable and inescapable, is terrible and menacing, for it never gives anything back, it returns nothing! The grave is more merciful than old age. On the tomb is written: 'Here Lies a Man', but you can read nothing on the cold and callous features of inhuman old age.<<endtimedinsert>>
+p235
+sg20
+(lp236
+sg22
+g23
+((I2013
+I5
+I5
+I20
+I27
+I17
+I6
+I125
+I1
+tp237
+(dp238
+tp239
+Rp240
+sg28
+g240
+sg29
+Vsleep will not come
+p241
+sbsa(dp242
+g12
+I00
+sg13
+(lp243
+F150.0
+aF1410.0
+asg15
+(itiddlywiki
+Tiddler
+p244
+(dp245
+g18
+VYou are in bed again.\u000a\u000aYou have been laying here sleepless for so long that if not for your hauntingly empty desk you might have wondered if in the end you had only dreamed the whole thing. You feel sicker and heavier than when you began.\u000a\u000aNine days from now, you will die, but for now [[sleep will not come]].
+p246
+sg20
+(lp247
+sg22
+g23
+((I2013
+I5
+I5
+I23
+I7
+I8
+I6
+I125
+I1
+tp248
+(dp249
+tp250
+Rp251
+sg28
+g251
+sg29
+Vgone
+p252
+sbsasS'scale'
+p253
+F1.0
 ss.
