@@ -14,27 +14,120 @@ Nine days from now, you'll die, but even if you knew it would give you no solace
 
 
 :: CSS [stylesheet]
-.timedreplacement.replacement-in {
-	opacity: 0;
+html
+{
+	height: 100%;
 }
 
-.timedreplacement {
+body
+{
+	background-color: black;
+	background-repeat: no-repeat;
+}
+
+@keyframes fire
+{
+0%  {
+	background-image: linear-gradient(bottom, #FF0000 36%, #000000 87%);
+		background-image: -o-linear-gradient(bottom, #FF0000 36%, #000000 87%);
+		background-image: -moz-linear-gradient(bottom, #FF0000 36%, #000000 87%);
+		background-image: -webkit-linear-gradient(bottom, #FF0000 36%, #000000 87%);
+		background-image: -ms-linear-gradient(bottom, #FF0000 36%, #000000 87%);
+
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.36, #FF0000),
+			color-stop(0.87, #000000)
+		);
+}
+100%  {
+background-image: linear-gradient(bottom, #FF7700 36%, #000000 87%);
+		background-image: -o-linear-gradient(bottom, #FF7700 36%, #000000 87%);
+		background-image: -moz-linear-gradient(bottom, #FF7700 36%, #000000 87%);
+		background-image: -webkit-linear-gradient(bottom, #FF7700 36%, #000000 87%);
+		background-image: -ms-linear-gradient(bottom, #FF7700 36%, #000000 87%);
+
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.36, #FF7700),
+			color-stop(0.87, #000000)
+		);
+
+}
+}
+
+.flaming
+{
+animation-name: fire;
+animation-duration: 2s;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+
+}
+
+#main-container
+{
+	width: 100%;
+	height: 80%;
+	color: white;
+	background-color: transparent;
+}
+
+#main-container a:link
+{
+	color: #FA8525;
+}
+
+#header-container
+{
+	padding-top: 5%;
+	background-color: transparent;
+	box-shadow: none;
+	border-bottom: transparent;
+}
+
+#footer-container
+{
+	background-color: transparent;
+	box-shadow: none;
+	border-top: transparent;
+}
+
+#snapback
+{
+display: none;
+}
+
+#restart
+{
+	display: none;
+}
+
+html.js
+{
+	background-color: transparent;
+}
+
+// used to fade in quotes with <<timedinsert>> at the very beginning and end
+
+.timedreplacement.replacement-in
+{
+	opacity: 0;
+}
+.timedinsert
+{
 	transition: 1s;
 	-webkit-transition: 1s;
 }
-
-.timedreplacement.replacement-out {
+.timedreplacement.replacement-out
+{
 	opacity: 0;
 }
 
-
-#snapback {
-	display:none;
-}
-
-.tabbed {
-	margin-left:8%;
-}
 
 
 :: Father Matvei
@@ -221,7 +314,7 @@ Hundreds of carefully handwritten pages arranged in a thick loose pile weigh dow
 
 
 :: You fail.
-Without knowing how it happened, you find yourself standing in front of the fire, the manuscript in your trembling hands. Here the fire feels [[hot]] like you're touching it yourself.
+<<set jQuery('body').addClass('flaming')>>Without knowing how it happened, you find yourself standing in front of the fire, the manuscript in your trembling hands. Here the fire feels [[hot]] like you're touching it yourself.
 
 The [[manuscript]] feels heavy in your hands; it hangs on you like an anchor, so heavy it almost threatens to pull you through the floor itself. You can hardly bear to hold it though you know you can't put it down until you complete your [[terrible task]].
 
@@ -230,6 +323,123 @@ The [[manuscript]] feels heavy in your hands; it hangs on you like an anchor, so
 The fire winks at you complicitly. The flames leap up as if to greet you, to plead you to come closer. It knows what you're about to do, it thinks it's okay, that it's not your fault. It can be your secret. The fire's beckoning makes you feel as though your hands are magnetically drawn to it, though you know you're not moving.
 
 The flames' seductive reassurances contrast in your mind with the stern orders of Father Matvei and the pleading of Murazov, whose mental arguments have paralyzed you in the [[sleepless hours|You fail.]] since you met with Matvei last night.
+
+
+:: CSS [stylesheet]
+html
+{
+	height: 100%;
+}
+
+body
+{
+	background-color: black;
+	background-repeat: no-repeat;
+}
+
+@keyframes fire
+{
+0%  {
+	background-image: linear-gradient(bottom, #FF0000 36%, #000000 87%);
+		background-image: -o-linear-gradient(bottom, #FF0000 36%, #000000 87%);
+		background-image: -moz-linear-gradient(bottom, #FF0000 36%, #000000 87%);
+		background-image: -webkit-linear-gradient(bottom, #FF0000 36%, #000000 87%);
+		background-image: -ms-linear-gradient(bottom, #FF0000 36%, #000000 87%);
+
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.36, #FF0000),
+			color-stop(0.87, #000000)
+		);
+}
+100%  {
+background-image: linear-gradient(bottom, #FF7700 36%, #000000 87%);
+		background-image: -o-linear-gradient(bottom, #FF7700 36%, #000000 87%);
+		background-image: -moz-linear-gradient(bottom, #FF7700 36%, #000000 87%);
+		background-image: -webkit-linear-gradient(bottom, #FF7700 36%, #000000 87%);
+		background-image: -ms-linear-gradient(bottom, #FF7700 36%, #000000 87%);
+
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.36, #FF7700),
+			color-stop(0.87, #000000)
+		);
+
+}
+}
+
+.flaming
+{
+animation-name: fire;
+animation-duration: 2s;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+
+}
+
+#main-container
+{
+	width: 100%;
+	height: 80%;
+	color: white;
+	background-color: transparent;
+}
+
+#main-container a:link
+{
+	color: #FA8525;
+}
+
+#header-container
+{
+	padding-top: 5%;
+	background-color: transparent;
+	box-shadow: none;
+	border-bottom: transparent;
+}
+
+#footer-container
+{
+	background-color: transparent;
+	box-shadow: none;
+	border-top: transparent;
+}
+
+#snapback
+{
+display: none;
+}
+
+#restart
+{
+	display: none;
+}
+
+html.js
+{
+	background-color: transparent;
+}
+
+// used to fade in quotes with <<timedinsert>> at the very beginning and end
+
+.timedreplacement.replacement-in
+{
+	opacity: 0;
+}
+.timedinsert
+{
+	transition: 1s;
+	-webkit-transition: 1s;
+}
+.timedreplacement.replacement-out
+{
+	opacity: 0;
+}
+
 
 
 :: terrible task
