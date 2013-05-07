@@ -36,14 +36,11 @@ S'text'
 p18
 VSo, the prosecutor! He lived and lived, and then he died! And so they'll print in the newspapers that there passed away, to the sorrow of his subordinates and of all mankind, a respectable citizen, a rare feather, an exemplary husband, and they'll write all sorts of stuff; and they'll add, maybe that he was accompanied by the weeping of widows and orphans; but if one looks into the matter properly, all you had, in fact, was bushy eyebrows.\u000a\u000a<<timedinsert 5s>> [[Dead Souls]]\u000a<html><div class="tabbed">- Nikolai Gogol</html> <<endtimedinsert>>
 p19
-sS'tags'
-p20
-(lp21
 sS'created'
-p22
+p20
 ctime
 struct_time
-p23
+p21
 ((I2013
 I4
 I18
@@ -53,17 +50,20 @@ I21
 I3
 I108
 I1
+tp22
+(dp23
 tp24
-(dp25
-tp26
-Rp27
+Rp25
+sS'title'
+p26
+VStart
+p27
 sS'modified'
 p28
-g27
-sS'title'
+g25
+sS'tags'
 p29
-VStart
-p30
+(lp30
 sbsa(dp31
 g12
 I00
@@ -80,11 +80,7 @@ g18
 V(function () {\u000a  version.extensions['timedreplaceMacro'] = {\u000a    major: 2,\u000a    minor: 2,\u000a    revision: 0\u000a  };\u000a  macros['timedinsert'] = macros['timedreplace'] = {\u000a    handler: function (g, e, f, b) {\u000a      function cssTimeUnit(s) {\u000a        if (typeof s == "string") {\u000a          if (s.slice(-2).toLowerCase() == "ms") {\u000a            return Number(s.slice(0, -2)) || 0;\u000a          }\u000a          else if (s.slice(-1).toLowerCase() == "s") {\u000a            return Number(s.slice(0, -1)) * 1000 || 0;\u000a          }\u000a        }\u000a        throwError(g, s + " isn't a CSS time unit");\u000a        return 0;\u000a      }\u000a\u000a      function tagcontents(starttag, endtag, k) {\u000a        var a = b.source.slice(k);\u000a        var l = 0;\u000a        var c = "";\u000a        for (var i = 0; i < a.length; i++) {\u000a          var w = endtag.length;\u000a          if (a.substr(i, w) == endtag) {\u000a            if (l == 0) {\u000a              b.nextMatch = k + i + w;\u000a              return c;\u000a            }\u000a            else {\u000a              l--;\u000a              c += a.charAt(i);\u000a            }\u000a          }\u000a          else {\u000a            if (a.substr(i, starttag.length) == starttag) {\u000a              l++;\u000a            }\u000a            c += a.charAt(i);\u000a          }\u000a        }\u000a        return "";\u000a      }\u000a      var tr = "<<" + e;\u000a      var rw = "<<replacewith>>";\u000a      var etr = "<<end" + e + ">>";\u000a      var k = b.source.indexOf('>>', b.matchStart) + 2;\u000a      var c, d;\u000a      if (e == "timedreplace") {\u000a        c = tagcontents(tr, rw, k);\u000a        d = tagcontents((c ? rw : tr), etr, c ? b.nextMatch : k);\u000a      }\u000a      else if (e == "timedinsert") {\u000a        d = tagcontents(tr, etr, k);\u000a      }\u000a      else if (e == "timedremove") {\u000a        c = tagcontents(tr, etr, k);\u000a      }\u000a      var tm;\u000a      tm = cssTimeUnit(f[0]);\u000a      var h;\u000a      if (c) {\u000a        if (d) {\u000a          g = insertElement(g, "span", null, "timedreplacements");\u000a        }\u000a        h = insertElement(g, "span", null, "timedreplacement timedremove");\u000a        new Wikifier(h, c);\u000a        if (d || e == "timedremove") {\u000a          setTimeout(function () {\u000a            h.classList.add("replacement-out");\u000a            setTimeout(function () {\u000a              h.parentNode.removeChild(h);\u000a            }, 1000);\u000a          }, tm);\u000a        }\u000a      }\u000a      if (d) {\u000a        var m = insertElement(g, "span", null, "timedreplacement timedinsert", d);\u000a        m.style.display = "none";\u000a        setTimeout(function () {\u000a          if (m) {\u000a            var t = m.firstChild ? m.firstChild.nodeValue : "";\u000a            removeChildren(m);\u000a            new Wikifier(m, t);\u000a            m.style.display = "inline";\u000a            m.classList.add("replacement-in");\u000a            setTimeout(function () {\u000a              m.classList.remove("replacement-in");\u000a            }, 1);\u000a            scrollWindowTo(m);\u000a          }\u000a        }, tm);\u000a      }\u000a      else if (!c && e != "timedremove") {\u000a        throwError(g, "can't find matching end" + e);\u000a        return;\u000a      }\u000a    }\u000a  }\u000a  macros['timedremove'] = macros['timedreplace'];\u000a  macros['replacewith'] = macros['endtimedinsert'] = macros['endtimedremove'] = macros['endtimedreplace'] = {\u000a    handler: function () {}\u000a  }\u000a  scrollWindowTo = function (E) {\u000a    var D = window.scrollY;\u000a    var G = J(E);\u000a    if (!G) return;\u000a    var C = Math.abs(D - G);\u000a    var B = 0;\u000a    var I = (D > G) ? -1 : 1;\u000a    var F = window.setInterval(H, 25);\u000a\u000a    function H() {\u000a      B += 0.1;\u000a      window.scrollTo(0, D + I * (C * Math.easeInOut(B)));\u000a      if (B >= 1) {\u000a        window.clearInterval(F)\u000a      }\u000a    }\u000a\u000a    function J(N) {\u000a      var O = A(N);\u000a      var P = O + N.offsetHeight;\u000a      var L = window.innerHeight;\u000a      var M = D + L;\u000a      if (O >= D && P > M) {\u000a        return ((N.offsetHeight < L) ? O - (L - N.offsetHeight) + 20 : O)\u000a      }\u000a    }\u000a\u000a    function A(K) {\u000a      var L = 0;\u000a      while (K.offsetParent) {\u000a        L += K.offsetTop;\u000a        K = K.offsetParent;\u000a      }\u000a      return L\u000a    }\u000a  }\u000a}());\u000a
 p35
 sg20
-(lp36
-Vscript
-p37
-asg22
-g23
+g21
 ((I2013
 I4
 I18
@@ -94,16 +90,20 @@ I46
 I3
 I108
 I1
+tp36
+(dp37
 tp38
-(dp39
-tp40
-Rp41
-sg28
-g41
-sg29
+Rp39
+sg26
 Vtimedinsert
+p40
+sg28
+g39
+sg29
+(lp41
+Vscript
 p42
-sbsa(dp43
+asbsa(dp43
 g12
 I00
 sg13
@@ -119,9 +119,7 @@ g18
 VYou are in bed.\u000a\u000aThat's not surprising. You've spent so much of your time in bed recently. You feel so heavy, and your voice feels so soft. Inside you Murazov has been speaking harshly of your cowardice, but that only makes you more afraid. You tremble at the sight of your quill. You rarely get up, except when [[Father Matvei]] is here.\u000a\u000aNine days from now, you'll die, but even if you knew it would give you no solace.
 p47
 sg20
-(lp48
-sg22
-g23
+g21
 ((I2013
 I4
 I18
@@ -131,15 +129,17 @@ I13
 I3
 I108
 I1
-tp49
-(dp50
-tp51
-Rp52
-sg28
-g52
-sg29
+tp48
+(dp49
+tp50
+Rp51
+sg26
 VDead Souls
-p53
+p52
+sg28
+g51
+sg29
+(lp53
 sbsa(dp54
 g12
 I00
@@ -156,9 +156,7 @@ g18
 VMs. Tea
 p58
 sg20
-(lp59
-sg22
-g23
+g21
 ((I2013
 I4
 I18
@@ -168,15 +166,17 @@ I50
 I3
 I108
 I1
-tp60
-(dp61
-tp62
-Rp63
-sg28
-g63
-sg29
+tp59
+(dp60
+tp61
+Rp62
+sg26
 VStoryAuthor
-p64
+p63
+sg28
+g62
+sg29
+(lp64
 sbsa(dp65
 g12
 I00
@@ -193,9 +193,7 @@ g18
 VDead Soul
 p69
 sg20
-(lp70
-sg22
-g23
+g21
 ((I2013
 I4
 I18
@@ -205,18 +203,20 @@ I37
 I3
 I108
 I1
-tp71
-(dp72
-tp73
-Rp74
-sg28
-g74
-sg29
+tp70
+(dp71
+tp72
+Rp73
+sg26
 VStoryTitle
-p75
+p74
+sg28
+g73
+sg29
+(lp75
 sbsa(dp76
 g12
-I01
+I00
 sg13
 (lp77
 I150
@@ -230,9 +230,7 @@ g18
 VFather Matvei was here last night.\u000a\u000aYou try to avoid looking over at your [[desk]], lest you think about the [[plan]] he urged you into. Your resolve is so very weak it could snap at any moment.
 p80
 sg20
-(lp81
-sg22
-g23
+g21
 ((I2013
 I4
 I18
@@ -242,15 +240,17 @@ I32
 I3
 I108
 I1
-tp82
-(dp83
-tp84
-Rp85
-sg28
-g85
-sg29
+tp81
+(dp82
+tp83
+Rp84
+sg26
 VFather Matvei
-p86
+p85
+sg28
+g84
+sg29
+(lp86
 sbsa(dp87
 g12
 I00
@@ -267,9 +267,7 @@ g18
 VThere, next to your plume, under the imagined glow of your unlit oil lamp, drowning in the almost physical presence of your guilt, is the manuscript. It's almost complete, and wants only a portion of a chapter here and there to be finished. You know that every bookseller in Moscow is eagerly awaiting it. Their anticipation [[crushes you|Father Matvei]] all the more.
 p91
 sg20
-(lp92
-sg22
-g23
+g21
 ((I2013
 I4
 I18
@@ -279,15 +277,17 @@ I5
 I3
 I108
 I1
-tp93
-(dp94
-tp95
-Rp96
-sg28
-g96
-sg29
+tp92
+(dp93
+tp94
+Rp95
+sg26
 Vdesk
-p97
+p96
+sg28
+g95
+sg29
+(lp97
 sbsa(dp98
 g12
 I00
@@ -304,9 +304,7 @@ g18
 VFather Matvei hates your book. You published the first half ten years ago. At the time you thought it was your greatest achievement - the culmination of your skill - your epic. But it was incomplete. You had written the fall of man; you needed to write man's redemption.\u000a\u000aYou have been working on the second half for ten years now, but Father Matvei has been increasingly harsh in his criticisms. It is not through the words of man, he says, that man will find redemption.\u000a\u000aFinally, last night, he gave you his ultimatum. To repair your relationship with God, the manuscript must [[burn]].
 p102
 sg20
-(lp103
-sg22
-g23
+g21
 ((I2013
 I4
 I18
@@ -316,15 +314,17 @@ I47
 I3
 I108
 I1
-tp104
-(dp105
-tp106
-Rp107
-sg28
-g107
-sg29
+tp103
+(dp104
+tp105
+Rp106
+sg26
 Vplan
-p108
+p107
+sg28
+g106
+sg29
+(lp108
 sbsa(dp109
 g12
 I00
@@ -341,9 +341,7 @@ g18
 VIt's cold in your bedroom, but you can faintly feel the warmth of the fire in the other room. You asked Selifan to set it for you, and then to run some errands so that you're left alone.\u000a\u000aYou shrink from the distant feeling of the fire, its accusatory warmth trying to sink in under the blankets. You try to put your mind off it. [[You fail.]]
 p113
 sg20
-(lp114
-sg22
-g23
+g21
 ((I2013
 I4
 I18
@@ -353,15 +351,17 @@ I3
 I3
 I108
 I1
-tp115
-(dp116
-tp117
-Rp118
-sg28
-g118
-sg29
+tp114
+(dp115
+tp116
+Rp117
+sg26
 Vburn
-p119
+p118
+sg28
+g117
+sg29
+(lp119
 sbsa(dp120
 g12
 I00
@@ -378,9 +378,7 @@ g18
 V<<set jQuery('body').addClass('flaming')>>Without knowing how it happened, you find yourself standing in front of the fire, the manuscript in your trembling hands. Here the fire feels [[hot]] like you're touching it yourself.\u000a\u000aThe [[manuscript]] feels heavy in your hands; it hangs on you like an anchor, so heavy it almost threatens to pull you through the floor itself. You can hardly bear to hold it though you know you can't put it down until you complete your [[terrible task]].
 p124
 sg20
-(lp125
-sg22
-g23
+g21
 ((I2013
 I4
 I18
@@ -390,15 +388,17 @@ I17
 I3
 I108
 I1
-tp126
-(dp127
-tp128
-Rp129
-sg28
-g129
-sg29
+tp125
+(dp126
+tp127
+Rp128
+sg26
 VYou fail.
-p130
+p129
+sg28
+g128
+sg29
+(lp130
 sbsa(dp131
 g12
 I00
@@ -415,9 +415,7 @@ g18
 VThe fire winks at you complicitly. The flames leap up as if to greet you, to plead you to come closer. It knows what you're about to do, it thinks it's okay, that it's not your fault. It can be your secret. The fire's beckoning makes you feel as though your hands are magnetically drawn to it, though you know you're not moving.\u000a\u000aThe flames' seductive reassurances contrast in your mind with the stern orders of Father Matvei and the pleading of Murazov, whose mental arguments have paralyzed you in the [[sleepless hours|You fail.]] since you met with Matvei last night.
 p135
 sg20
-(lp136
-sg22
-g23
+g21
 ((I2013
 I4
 I18
@@ -427,15 +425,17 @@ I25
 I3
 I108
 I1
-tp137
-(dp138
-tp139
-Rp140
-sg28
-g140
-sg29
+tp136
+(dp137
+tp138
+Rp139
+sg26
 Vhot
-p141
+p140
+sg28
+g139
+sg29
+(lp141
 sbsa(dp142
 g12
 I00
@@ -452,9 +452,7 @@ g18
 VHundreds of carefully handwritten pages arranged in a thick loose pile weigh down your guilty hands. The ink swirls across your vision, and you close your eyes as though that would carry it away. The cool sharp texture of the paper seems to crawl in your hands, desperate from some kind of escape from [[its impending fate|You fail.]]
 p146
 sg20
-(lp147
-sg22
-g23
+g21
 ((I2013
 I4
 I19
@@ -464,15 +462,17 @@ I38
 I4
 I109
 I1
-tp148
-(dp149
-tp150
-Rp151
-sg28
-g151
-sg29
+tp147
+(dp148
+tp149
+Rp150
+sg26
 Vmanuscript
-p152
+p151
+sg28
+g150
+sg29
+(lp152
 sbsa(dp153
 g12
 I00
@@ -489,9 +489,7 @@ g18
 VSomehow without realizing it you have taken the first few pages from the top of the manuscript and are hesitantly holding them over the fire. Your hand shakes with great force threatening to thrust the first dagger without so much as the satisfaction of the deliberate act.\u000a\u000aWith your hand this close to the [[fire]] you had better [[take the plunge]] before it takes itself.
 p157
 sg20
-(lp158
-sg22
-g23
+g21
 ((I2013
 I4
 I20
@@ -501,15 +499,17 @@ I3
 I5
 I110
 I1
-tp159
-(dp160
-tp161
-Rp162
-sg28
-g162
-sg29
+tp158
+(dp159
+tp160
+Rp161
+sg26
 Vterrible task
-p163
+p162
+sg28
+g161
+sg29
+(lp163
 sbsa(dp164
 g12
 I00
@@ -526,9 +526,7 @@ g18
 VYou hardly notice when you toss the papers on the fire, only coming to when the crackling sound and the smell of your work strike you out of the disassociative stupor.\u000a\u000aTentetnikov ever the fatalist is the first to go, going down with the ship as the first flames seductively coil themselves around the edges of the page. He hardly seems to react even as he's being pulled down, more interested in himself than in his surroundings. Surely he wonders to himself how his life could have been better, how this catastrophe could have been avoided, as he rationalizes that it's anyone's fault but his own. Perhaps just maybe had he had that wonderful teacher in his youth...\u000a\u000aThe question remains unanswered as his face drops below the flames. What could have been burns as well as what is. The fire consumes Tentetnikov, his teacher, and his unwritten work [[together]].
 p168
 sg20
-(lp169
-sg22
-g23
+g21
 ((I2013
 I4
 I20
@@ -538,15 +536,17 @@ I49
 I5
 I110
 I1
-tp170
-(dp171
-tp172
-Rp173
-sg28
-g173
-sg29
+tp169
+(dp170
+tp171
+Rp172
+sg26
 Vtake the plunge
-p174
+p173
+sg28
+g172
+sg29
+(lp174
 sbsa(dp175
 g12
 I00
@@ -563,9 +563,7 @@ g18
 VYour vision fills with red, red, red, blurring and seeming to overlap everything else around you. You blink to clear your vision but the afterimage still seems to fill the room. Even in phantom form the fire's [[conspiratorial flames|terrible task]] haunt you.
 p179
 sg20
-(lp180
-sg22
-g23
+g21
 ((I2013
 I4
 I29
@@ -575,15 +573,17 @@ I53
 I0
 I119
 I1
-tp181
-(dp182
-tp183
-Rp184
-sg28
-g184
-sg29
+tp180
+(dp181
+tp182
+Rp183
+sg26
 Vfire
-p185
+p184
+sg28
+g183
+sg29
+(lp185
 sbsa(dp186
 g12
 I00
@@ -600,9 +600,7 @@ g18
 VAfter a sequence of generals and daughters and landowners through which you can hardly pay attention comes Kostanjoglo, the scientist-farmer, so busy planning his estate \u2014 eyes down that is on the earth \u2014 that he hadn't even noticed the fire until the first flame snatches him. Now he looks up in shock the plans on his desk already reduced to a pile of ash. All around him his crops are burning with their smoke smudging out the next words on the page you hold in your hand.\u000a\u000aHe rushes out to organize his serfs only to find that they are already burned, their village so far gone not even ashes remain to tell where it once stood. Indeed in another moment with the immolation of Kostanjoglo himself perhaps there will stand no further record that there once existed a Kostanjoglo [[at all|Murazov]].
 p190
 sg20
-(lp191
-sg22
-g23
+g21
 ((I2013
 I4
 I29
@@ -612,15 +610,17 @@ I12
 I0
 I119
 I1
-tp192
-(dp193
-tp194
-Rp195
-sg28
-g195
-sg29
+tp191
+(dp192
+tp193
+Rp194
+sg26
 Vtogether
-p196
+p195
+sg28
+g194
+sg29
+(lp196
 sbsa(dp197
 g12
 I00
@@ -637,9 +637,7 @@ g18
 VFinally you reach Chichikov himself, who looks up at you with shock as he finds himself cast upon the flames. He has watched your purge with a kind of distant curiosity, as though it was some faraway story he had once read about in a French novel; with as much relevance to his life perhaps as the death of the prosecutor. No doubt the thought crossed his mind that somewhere among these deaths he could stand to profit. To find himself here staring up at you who alone stand to rend judgement over him is a thing so shocking that for a few moments he hardly seems to be capable of fitting it inside his head.\u000a\u000aHe screams for pity, reaches up an arm to you for salvation, and though for a moment your breaking heart is ready to grant him salvation the rest of your manuscript is filled, filled to the brim with dead souls without the slightest purchase for Chichikov. The long long list of the Mikheyevs and the Probkas and the Milushkins and the Maxims and the Yeremeys which once seemed so very much like his salvation were nothing more than dead weights pushing him further and further into the fire.\u000a\u000aAfter a very long time under the flames, Chichikov invokes the strength to reach up one last time, fingers scrambling against the pages for some kind of a hold, then slips away and is [[gone]].
 p201
 sg20
-(lp202
-sg22
-g23
+g21
 ((I2013
 I4
 I29
@@ -649,15 +647,17 @@ I21
 I0
 I119
 I1
-tp203
-(dp204
-tp205
-Rp206
-sg28
-g206
-sg29
+tp202
+(dp203
+tp204
+Rp205
+sg26
 Vat all
-p207
+p206
+sg28
+g205
+sg29
+(lp207
 sbsa(dp208
 g12
 I00
@@ -674,9 +674,7 @@ g18
 VLong before you actually reach him the voice of Murazov has been quietly pleading with you to stop, to rethink things. His voice is one half of the argument which has played itself out in your head without stop since Father Matvei left last night, assuring you that he knows what a good man you could be, to forget your plot \u2014 you know, he implores you, that you won't find peace in that, your enemy, your tempter, your betrayer.\u000a\u000aAnd indeed, Father Matvei's voice seems now so very soft where only a few minutes ago his commands made all the world ring. But your hands move mechanically and continue to feed the fire not anymore of your own accord but quite automatically. Murazov's voice too now grows softer under the load of the papers taken alight all around him, quite indistinct when surrounded by all the flame and smoke of Navarino.\u000a\u000aAs at last his features become obscured by the fire you realize that in the end you never knew much about Murazov [[at all]].
 p212
 sg20
-(lp213
-sg22
-g23
+g21
 ((I2013
 I5
 I5
@@ -686,15 +684,17 @@ I36
 I6
 I125
 I1
-tp214
-(dp215
-tp216
-Rp217
-sg28
-g217
-sg29
+tp213
+(dp214
+tp215
+Rp216
+sg26
 VMurazov
-p218
+p217
+sg28
+g216
+sg29
+(lp218
 sbsa(dp219
 g12
 I00
@@ -711,9 +711,7 @@ g18
 V<<timedinsert 3s>>Anything can happen to a man: the fiery youth of today would recoil in horror if one were to show him his portrait in old age. So, as you pass from the tender years of youth into harsh and embittered manhood, make sure you take with you on your journey all the human emotions! Don't leave them on the road, for you will not pick them up afterwards! Old age, inevitable and inescapable, is terrible and menacing, for it never gives anything back, it returns nothing! The grave is more merciful than old age. On the tomb is written: 'Here Lies a Man', but you can read nothing on the cold and callous features of inhuman old age.<<endtimedinsert>>
 p223
 sg20
-(lp224
-sg22
-g23
+g21
 ((I2013
 I5
 I5
@@ -723,15 +721,17 @@ I17
 I6
 I125
 I1
-tp225
-(dp226
-tp227
-Rp228
-sg28
-g228
-sg29
+tp224
+(dp225
+tp226
+Rp227
+sg26
 Vsleep will not come
-p229
+p228
+sg28
+g227
+sg29
+(lp229
 sbsa(dp230
 g12
 I00
@@ -748,9 +748,7 @@ g18
 VYou are in bed again.\u000a\u000aYou have been laying here sleepless for so long that if not for your hauntingly empty desk you might have wondered if in the end you had only dreamed the whole thing. You feel sicker and heavier than when you began.\u000a\u000aNine days from now, you will die, but for now [[sleep will not come]].
 p234
 sg20
-(lp235
-sg22
-g23
+g21
 ((I2013
 I5
 I5
@@ -760,18 +758,20 @@ I8
 I6
 I125
 I1
-tp236
-(dp237
-tp238
-Rp239
-sg28
-g239
-sg29
+tp235
+(dp236
+tp237
+Rp238
+sg26
 Vgone
-p240
+p239
+sg28
+g238
+sg29
+(lp240
 sbsa(dp241
 g12
-I00
+I01
 sg13
 (lp242
 F570.0
@@ -782,14 +782,10 @@ Tiddler
 p243
 (dp244
 g18
-Vhtml\u000a{\u000a	height: 100%;\u000a}\u000a\u000abody\u000a{\u000a	background-color: black;\u000a	background-repeat: no-repeat;\u000a}\u000a\u000a@keyframes fire\u000a{\u000a0%  {\u000a	background-image: linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -o-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -moz-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -webkit-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -ms-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a\u000a		background-image: -webkit-gradient(\u000a			linear,\u000a			left bottom,\u000a			left top,\u000a			color-stop(0.36, #FF0000),\u000a			color-stop(0.87, #000000)\u000a		);\u000a}\u000a100%  {\u000abackground-image: linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -o-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -moz-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -webkit-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -ms-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a\u000a		background-image: -webkit-gradient(\u000a			linear,\u000a			left bottom,\u000a			left top,\u000a			color-stop(0.36, #FF7700),\u000a			color-stop(0.87, #000000)\u000a		);\u000a\u000a}\u000a}\u000a\u000a.flaming\u000a{\u000aanimation-name: fire;\u000aanimation-duration: 2s;\u000aanimation-direction: alternate;\u000aanimation-iteration-count: infinite;\u000a\u000a}\u000a\u000a#main-container\u000a{\u000a	width: 100%;\u000a	height: 80%;\u000a	color: white;\u000a	background-color: transparent;\u000a}\u000a\u000a#main-container a:link\u000a{\u000a	color: #FA8525;\u000a}\u000a\u000a#header-container\u000a{\u000a	padding-top: 5%;\u000a	background-color: transparent;\u000a	box-shadow: none;\u000a	border-bottom: transparent;\u000a}\u000a\u000a#footer-container\u000a{\u000a	background-color: transparent;\u000a	box-shadow: none;\u000a	border-top: transparent;\u000a}\u000a\u000a#snapback\u000a{\u000adisplay: none;\u000a}\u000a\u000a#restart\u000a{\u000a	display: none;\u000a}\u000a\u000ahtml.js\u000a{\u000a	background-color: transparent;\u000a}\u000a\u000a// used to fade in quotes with <<timedinsert>> at the very beginning and end\u000a\u000a.timedreplacement.replacement-in\u000a{\u000a	opacity: 0;\u000a}\u000a\u000a.timedreplacement\u000a{\u000a	transition: 1s;\u000a	-webkit-transition: 1s;\u000a}\u000a\u000a.timedreplacement.replacement-out\u000a{\u000a	opacity: 0;\u000a}\u000a
+Vhtml\u000a{\u000a	height: 100%;\u000a}\u000a\u000abody\u000a{\u000a	background-color: black;\u000a	background-repeat: no-repeat;\u000a}\u000a\u000a@keyframes fire\u000a{\u000a0%  {\u000a	background-image: linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -o-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -moz-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -webkit-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -ms-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a\u000a		background-image: -webkit-gradient(\u000a			linear,\u000a			left bottom,\u000a			left top,\u000a			color-stop(0.36, #FF0000),\u000a			color-stop(0.87, #000000)\u000a		);\u000a}\u000a100%  {\u000abackground-image: linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -o-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -moz-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -webkit-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -ms-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a\u000a		background-image: -webkit-gradient(\u000a			linear,\u000a			left bottom,\u000a			left top,\u000a			color-stop(0.36, #FF7700),\u000a			color-stop(0.87, #000000)\u000a		);\u000a\u000a}\u000a}\u000a\u000a.flaming\u000a{\u000aanimation-name: fire;\u000aanimation-duration: 2s;\u000aanimation-direction: alternate;\u000aanimation-iteration-count: infinite;\u000a\u000a}\u000a\u000a#main-container\u000a{\u000a	width: 100%;\u000a	height: 80%;\u000a	color: white;\u000a	background-color: transparent;\u000a}\u000a\u000a#main-container a:link\u000a{\u000a	color: #FA8525;\u000a}\u000a\u000a#header-container\u000a{\u000a	padding-top: 5%;\u000a	background-color: transparent;\u000a	box-shadow: none;\u000a	border-bottom: transparent;\u000a}\u000a\u000a#footer-container\u000a{\u000a	background-color: transparent;\u000a	box-shadow: none;\u000a	border-top: transparent;\u000a}\u000a\u000a#snapback\u000a{\u000adisplay: none;\u000a}\u000a\u000a#restart\u000a{\u000a	display: none;\u000a}\u000a\u000ahtml.js\u000a{\u000a	background-color: transparent;\u000a}\u000a\u000a/* used to fade in quotes with <<timedinsert>> at the very beginning and end */\u000a\u000a.timedreplacement.replacement-in\u000a{\u000a	opacity: 0;\u000a}\u000a\u000a.timedreplacement\u000a{\u000a	transition: 1s;\u000a	-webkit-transition: 1s;\u000a}\u000a\u000a.timedreplacement.replacement-out\u000a{\u000a	opacity: 0;\u000a}\u000a
 p245
 sg20
-(lp246
-Vstylesheet
-p247
-asg22
-g23
+g21
 ((I2013
 I5
 I6
@@ -799,16 +795,20 @@ I30
 I0
 I126
 I1
+tp246
+(dp247
 tp248
-(dp249
-tp250
-Rp251
-sg28
-g251
-sg29
+Rp249
+sg26
 VCSS
+p250
+sg28
+g249
+sg29
+(lp251
+Vstylesheet
 p252
-sbsasS'scale'
+asbsasS'scale'
 p253
 F1.0
 ss.

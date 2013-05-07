@@ -112,7 +112,7 @@ html.js
 	background-color: transparent;
 }
 
-// used to fade in quotes with <<timedinsert>> at the very beginning and end
+/* used to fade in quotes with <<timedinsert>> at the very beginning and end */
 
 .timedreplacement.replacement-in
 {
