@@ -216,7 +216,7 @@ sg29
 (lp75
 sbsa(dp76
 g12
-I00
+I01
 sg13
 (lp77
 I150
@@ -227,7 +227,7 @@ Tiddler
 p78
 (dp79
 g18
-VFather Matvei was here last night.\u000a\u000aYou try to avoid looking over at your [[desk]], lest you think about the [[plan]] he urged you into. Your resolve is so very weak it could snap at any moment.
+VFather Matvei was here last night.\u000a\u000aYou try to avoid looking over at your [[desk]], lest you think about the [[plan]] he has urged you into. Your resolve is so very weak it could snap at any moment.
 p80
 sg20
 g21
@@ -771,7 +771,7 @@ sg29
 (lp240
 sbsa(dp241
 g12
-I01
+I00
 sg13
 (lp242
 F570.0
