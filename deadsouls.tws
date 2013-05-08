@@ -375,7 +375,7 @@ Tiddler
 p122
 (dp123
 g18
-V<<set jQuery('body').addClass('flaming')>>Without knowing how it happened, you find yourself standing in front of the fire, the manuscript in your trembling hands. Here the fire feels [[hot]] like you're touching it yourself.\u000a\u000aThe [[manuscript]] feels heavy in your hands; it hangs on you like an anchor, so heavy it almost threatens to pull you through the floor itself. You can hardly bear to hold it though you know you can't put it down until you complete your [[terrible task]].
+V<<set create_fire()>>Without knowing how it happened, you find yourself standing in front of the fire, the manuscript in your trembling hands. Here the fire feels [[hot]] like you're touching it yourself.\u000a\u000aThe [[manuscript]] feels heavy in your hands; it hangs on you like an anchor, so heavy it almost threatens to pull you through the floor itself. You can hardly bear to hold it though you know you can't put it down until you complete your [[terrible task]].
 p124
 sg20
 g21
@@ -438,7 +438,7 @@ sg29
 (lp141
 sbsa(dp142
 g12
-I01
+I00
 sg13
 (lp143
 I10
@@ -697,7 +697,7 @@ sg29
 (lp218
 sbsa(dp219
 g12
-I00
+I01
 sg13
 (lp220
 F150.0
@@ -708,7 +708,7 @@ Tiddler
 p221
 (dp222
 g18
-V<<timedinsert 3s>>Anything can happen to a man: the fiery youth of today would recoil in horror if one were to show him his portrait in old age. So, as you pass from the tender years of youth into harsh and embittered manhood, make sure you take with you on your journey all the human emotions! Don't leave them on the road, for you will not pick them up afterwards! Old age, inevitable and inescapable, is terrible and menacing, for it never gives anything back, it returns nothing! The grave is more merciful than old age. On the tomb is written: 'Here Lies a Man', but you can read nothing on the cold and callous features of inhuman old age.<<endtimedinsert>>
+V<<timedinsert 1s>>Anything can happen to a man: the fiery youth of today would recoil in horror if one were to show him his portrait in old age. So, as you pass from the tender years of youth into harsh and embittered manhood, make sure you take with you on your journey all the human emotions! Don't leave them on the road, for you will not pick them up afterwards! Old age, inevitable and inescapable, is terrible and menacing, for it never gives anything back, it returns nothing! The grave is more merciful than old age. On the tomb is written: 'Here Lies a Man', but you can read nothing on the cold and callous features of inhuman old age.<<endtimedinsert>>
 p223
 sg20
 g21
@@ -745,7 +745,7 @@ Tiddler
 p232
 (dp233
 g18
-VYou are in bed again.\u000a\u000aYou have been laying here sleepless for so long that if not for your hauntingly empty desk you might have wondered if in the end you had only dreamed the whole thing. You feel sicker and heavier than when you began.\u000a\u000aNine days from now, you will die, but for now [[sleep will not come]].
+V<<set destroy_fire()>>You are in bed again.\u000a\u000aYou have been laying here sleepless for so long that if not for your hauntingly empty desk you might have wondered if in the end you had only dreamed the whole thing. You feel sicker and heavier than when you began.\u000a\u000aNine days from now, you will die, but for now [[sleep will not come]].
 p234
 sg20
 g21
@@ -782,7 +782,7 @@ Tiddler
 p243
 (dp244
 g18
-Vhtml\u000a{\u000a	height: 100%;\u000a}\u000a\u000abody\u000a{\u000a	background-color: black;\u000a	background-repeat: no-repeat;\u000a}\u000a\u000a@keyframes fire\u000a{\u000a0%  {\u000a	background-image: linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -o-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -moz-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -webkit-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -ms-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a\u000a		background-image: -webkit-gradient(\u000a			linear,\u000a			left bottom,\u000a			left top,\u000a			color-stop(0.36, #FF0000),\u000a			color-stop(0.87, #000000)\u000a		);\u000a}\u000a100%  {\u000abackground-image: linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -o-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -moz-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -webkit-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a		background-image: -ms-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a\u000a		background-image: -webkit-gradient(\u000a			linear,\u000a			left bottom,\u000a			left top,\u000a			color-stop(0.36, #FF7700),\u000a			color-stop(0.87, #000000)\u000a		);\u000a\u000a}\u000a}\u000a\u000a.flaming\u000a{\u000aanimation-name: fire;\u000aanimation-duration: 2s;\u000aanimation-direction: alternate;\u000aanimation-iteration-count: infinite;\u000a\u000a}\u000a\u000a#main-container\u000a{\u000a	width: 100%;\u000a	height: 80%;\u000a	color: white;\u000a	background-color: transparent;\u000a}\u000a\u000a#main-container a:link\u000a{\u000a	color: #FA8525;\u000a}\u000a\u000a#header-container\u000a{\u000a	padding-top: 5%;\u000a	background-color: transparent;\u000a	box-shadow: none;\u000a	border-bottom: transparent;\u000a}\u000a\u000a#footer-container\u000a{\u000a	background-color: transparent;\u000a	box-shadow: none;\u000a	border-top: transparent;\u000a}\u000a\u000a#snapback\u000a{\u000adisplay: none;\u000a}\u000a\u000a#restart\u000a{\u000a	display: none;\u000a}\u000a\u000ahtml.js\u000a{\u000a	background-color: transparent;\u000a}\u000a\u000a/* used to fade in quotes with <<timedinsert>> at the very beginning and end */\u000a\u000a.timedreplacement.replacement-in\u000a{\u000a	opacity: 0;\u000a}\u000a\u000a.timedreplacement\u000a{\u000a	transition: 1s;\u000a	-webkit-transition: 1s;\u000a}\u000a\u000a.timedreplacement.replacement-out\u000a{\u000a	opacity: 0;\u000a}\u000a
+Vhtml\u000a{\u000a	height: 100%;\u000a}\u000a\u000abody\u000a{\u000a	background-color: black;\u000a	background-repeat: no-repeat;\u000a}\u000a\u000a.red\u000a{\u000a	box-shadow: 0px 0px 105px black inset;\u000a	background-image: linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -o-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -moz-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -webkit-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a		background-image: -ms-linear-gradient(bottom, #FF0000 36%, #000000 87%);\u000a\u000a		background-image: -webkit-gradient(\u000a			linear,\u000a			left bottom,\u000a			left top,\u000a			color-stop(0.36, #FF0000),\u000a			color-stop(0.87, #000000)\u000a		);\u000a\u000a	animation: red-fade 4s ease 0s infinite alternate;\u000a}\u000a\u000a.orange\u000a{\u000a	box-shadow: 0px 0px 105px black inset;\u000a	background-image: linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a	background-image: -o-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a	background-image: -moz-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a	background-image: -webkit-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a	background-image: -ms-linear-gradient(bottom, #FF7700 36%, #000000 87%);\u000a\u000a	background-image: -webkit-gradient(\u000a		linear,\u000a		left bottom,\u000a		left top,\u000a		color-stop(0.36, #FF7700),\u000a		color-stop(0.87, #000000)\u000a	);\u000a	animation: orange-fade 1s ease 0s infinite alternate;\u000a}\u000a\u000a.flaming\u000a{\u000a	position: absolute;\u000a	top: 0;\u000a	left: 0;\u000a	width: 100%;\u000a	height: 100%;\u000a	z-index: 1;\u000a	background-color: transparent;\u000a	opacity: 0.4;\u000a\u000a	/* This will be used when the fire is destroyed */\u000a	transition: 1s;\u000a	-webkit-transition: 1s;\u000a}\u000a\u000a.zero-opacity\u000a{\u000a	opacity: 0 !important;\u000a	z-index: -10;\u000a}\u000a\u000a.paused\u000a{\u000a	animation-play-state: paused;\u000a}\u000a\u000a@keyframes red-fade\u000a{\u000a0% { opacity: 0.1; }\u000a100% { opacity: 0.2; }\u000a}\u000a\u000a@keyframes orange-fade\u000a{\u000a0% { opacity: 0.1; }\u000a100% { opacity: 0.25; }\u000a}\u000a\u000a#main-container\u000a{\u000a	position: relative;\u000a	width: 100%;\u000a	height: 80%;\u000a	color: white;\u000a	background-color: transparent;\u000a	z-index: 2;\u000a}\u000a\u000a#main-container a:link\u000a{\u000a	color: #FA8525;\u000a}\u000a\u000a#header-container\u000a{\u000a	padding-top: 5%;\u000a	background-color: transparent;\u000a	box-shadow: none;\u000a	border-bottom: transparent;\u000a}\u000a\u000a#footer-container\u000a{\u000a	background-color: transparent;\u000a	box-shadow: none;\u000a	border-top: transparent;\u000a}\u000a\u000a#snapback\u000a{\u000adisplay: none;\u000a}\u000a\u000a#restart\u000a{\u000a	display: none;\u000a}\u000a\u000ahtml.js\u000a{\u000a	background-color: transparent;\u000a}\u000a\u000a/* used to fade in quotes with <<timedinsert>> at the very beginning and end */\u000a\u000a.timedreplacement.replacement-in\u000a{\u000a	opacity: 0;\u000a}\u000a\u000a.timedreplacement\u000a{\u000a	transition: 1s;\u000a	-webkit-transition: 1s;\u000a}\u000a\u000a.timedreplacement.replacement-out\u000a{\u000a	opacity: 0;\u000a}\u000a
 p245
 sg20
 g21
@@ -808,7 +808,46 @@ sg29
 (lp251
 Vstylesheet
 p252
-asbsasS'scale'
-p253
+asbsa(dp253
+g12
+I00
+sg13
+(lp254
+F570.0
+aF570.0
+asg15
+(itiddlywiki
+Tiddler
+p255
+(dp256
+g18
+Vwindow.create_fire = function()\u000a{\u000a	jQuery('body').append("<div class='red flaming'></div>");\u000a	jQuery('body').append("<div class='orange flaming'></div>");\u000a}\u000a\u000awindow.destroy_fire = function()\u000a{\u000a	flaming = jQuery('.flaming');\u000a	flaming.addClass('paused');\u000a	flaming.addClass('zero-opacity');\u000a}
+p257
+sg29
+(lp258
+Vscript
+p259
+asg20
+g21
+((I2013
+I5
+I7
+I21
+I22
+I1
+I1
+I127
+I1
+tp260
+(dp261
+tp262
+Rp263
+sg28
+g263
+sg26
+VFire scripts
+p264
+sbsasS'scale'
+p265
 F1.0
 ss.
