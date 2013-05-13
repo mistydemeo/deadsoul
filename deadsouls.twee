@@ -43,6 +43,7 @@ body
 		);
 
 	animation: red-fade 4s ease 0s infinite alternate;
+	-webkit-animation: red-fade 4s ease 0s infinite alternate;
 }
 
 .orange
@@ -62,6 +63,7 @@ body
 		color-stop(0.87, #000000)
 	);
 	animation: orange-fade 1s ease 0s infinite alternate;
+	-webkit-animation: orange-fade 1s ease 0s infinite alternate;
 }
 
 .flaming
@@ -97,7 +99,19 @@ body
 100% { opacity: 0.2; }
 }
 
+@-webkit-keyframes red-fade /* Chrome and Safari need the prefix */
+{
+0% { opacity: 0.1; }
+100% { opacity: 0.2; }
+}
+
 @keyframes orange-fade
+{
+0% { opacity: 0.1; }
+100% { opacity: 0.25; }
+}
+
+@-webkit-keyframes orange-fade
 {
 0% { opacity: 0.1; }
 100% { opacity: 0.25; }
