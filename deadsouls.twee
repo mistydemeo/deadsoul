@@ -1,5 +1,5 @@
 ﻿:: Start
-So, the prosecutor! He lived and lived, and then he died! And so they'll print in the newspapers that there passed away, to the sorrow of his subordinates and of all mankind, a respectable citizen, a rare feather, an exemplary husband, and they'll write all sorts of stuff; and they'll add, maybe that he was accompanied by the weeping of widows and orphans; but if one looks into the matter properly, all you had, in fact, was bushy eyebrows.
+So, the prosecutor! He lived and lived, and then he died! And so they&rsquo;ll print in the newspapers that there passed away, to the sorrow of his subordinates and of all mankind, a respectable citizen, a rare feather, an exemplary husband, and they&rsquo;ll write all sorts of stuff; and they&rsquo;ll add, maybe that he was accompanied by the weeping of widows and orphans; but if one looks into the matter properly, all you had, in fact, was bushy eyebrows.
 
 <<timedinsert 5s>> [[Dead Souls]]
 <html><div class="tabbed">- Nikolai Gogol</html> <<endtimedinsert>>
@@ -8,9 +8,9 @@ So, the prosecutor! He lived and lived, and then he died! And so they'll print i
 :: Dead Souls
 You are in bed.
 
-That's not surprising. You've spent so much of your time in bed recently. You feel so heavy, and your voice feels so soft. Inside you Murazov has been speaking harshly of your cowardice, but that only makes you more afraid. You tremble at the sight of your quill. You rarely get up, except when [[Father Matvei]] is here.
+That&rsquo;s not surprising. You&rsquo;ve spent so much of your time in bed recently. You feel so heavy, and your voice feels so soft. Inside you Murazov has been speaking harshly of your cowardice, but that only makes you more afraid. You tremble at the sight of your quill. You rarely get up, except when [[Father Matvei]] is here.
 
-Nine days from now, you'll die, but even if you knew it would give you no solace.
+Nine days from now, you&rsquo;ll die, but even if you knew it would give you no solace.
 
 
 :: CSS [stylesheet]
@@ -175,7 +175,7 @@ You try to avoid looking over at your [[desk]], lest you think about the [[plan]
 
 
 :: desk
-There, next to your plume, under the imagined glow of your unlit oil lamp, drowning in the almost physical presence of your guilt, is the manuscript. It's almost complete, and wants only a portion of a chapter here and there to be finished. You know that every bookseller in Moscow is eagerly awaiting it. Their anticipation [[crushes you|Father Matvei]] all the more.
+There, next to your plume, under the imagined glow of your unlit oil lamp, drowning in the almost physical presence of your guilt, is the manuscript. It&rsquo;s almost complete, and wants only a portion of a chapter here and there to be finished. You know that every bookseller in Moscow is eagerly awaiting it. Their anticipation [[crushes you|Father Matvei]] all the more.
 
 
 :: timedinsert [script]
@@ -326,7 +326,7 @@ There, next to your plume, under the imagined glow of your unlit oil lamp, drown
 
 
 :: plan
-Father Matvei hates your book. You published the first half ten years ago. At the time you thought it was your greatest achievement&mdash;the culmination of your skill&mdash;your epic. But it was incomplete. You had written the fall of man; you needed to write man's redemption.
+Father Matvei hates your book. You published the first half ten years ago. At the time you thought it was your greatest achievement&mdash;the culmination of your skill&mdash;your epic. But it was incomplete. You had written the fall of man; you needed to write man&rsquo;s redemption.
 
 You have been working on the second half for ten years now, but Father Matvei has been increasingly harsh in his criticisms. It is not through the words of man, he says, that man will find redemption.
 
@@ -338,7 +338,7 @@ Ms. Tea
 
 
 :: burn
-It's cold in your bedroom, but you can faintly feel the warmth of the fire in the other room. You asked Selifan to set it for you, and then to run some errands so that you're left alone.
+It&rsquo;s cold in your bedroom, but you can faintly feel the warmth of the fire in the other room. You asked Selifan to set it for you, and then to run some errands so that you&rsquo;re left alone.
 
 You shrink from the distant feeling of the fire, its accusatory warmth trying to sink in under the blankets. You try to put your mind off it. [[You fail.]]
 
@@ -352,15 +352,15 @@ Hundreds of carefully handwritten pages arranged in a thick loose pile weigh dow
 
 
 :: You fail.
-<<set create_fire()>>Without knowing how it happened, you find yourself standing in front of the fire, the manuscript in your trembling hands. Here the fire feels [[hot]] like you're touching it yourself.
+<<set create_fire()>>Without knowing how it happened, you find yourself standing in front of the fire, the manuscript in your trembling hands. Here the fire feels [[hot]] like you&rsquo;re touching it yourself.
 
-The [[manuscript]] feels heavy in your hands; it hangs on you like an anchor, so heavy it almost threatens to pull you through the floor itself. You can hardly bear to hold it though you know you can't put it down until you complete your [[terrible task]].
+The [[manuscript]] feels heavy in your hands; it hangs on you like an anchor, so heavy it almost threatens to pull you through the floor itself. You can hardly bear to hold it though you know you can&rsquo;t put it down until you complete your [[terrible task]].
 
 
 :: hot
-The fire winks at you complicitly. The flames leap up as if to greet you, to plead you to come closer. It knows what you're about to do, it thinks it's okay, that it's not your fault. It can be your secret. The fire's beckoning makes you feel as though your hands are magnetically drawn to it, though you know you're not moving.
+The fire winks at you complicitly. The flames leap up as if to greet you, to plead you to come closer. It knows what you&rsquo;re about to do, it thinks it&rsquo;s okay, that it&rsquo;s not your fault. It can be your secret. The fire&rsquo;s beckoning makes you feel as though your hands are magnetically drawn to it, though you know you&rsquo;re not moving.
 
-The flames' seductive reassurances contrast in your mind with the stern orders of Father Matvei and the pleading of Murazov, whose mental arguments have paralyzed you in the [[sleepless hours|You fail.]] since you met with Matvei last night.
+The flames&rsquo; seductive reassurances contrast in your mind with the stern orders of Father Matvei and the pleading of Murazov, whose mental arguments have paralyzed you in the [[sleepless hours|You fail.]] since you met with Matvei last night.
 
 
 :: Fire scripts [script]
@@ -385,27 +385,27 @@ With your hand this close to the [[fire]] you had better [[take the plunge]] bef
 
 
 :: fire
-Your vision fills with red, red, red, blurring and seeming to overlap everything else around you. You blink to clear your vision but the afterimage still seems to fill the room. Even in phantom form the fire's [[conspiratorial flames|terrible task]] haunt you.
+Your vision fills with red, red, red, blurring and seeming to overlap everything else around you. You blink to clear your vision but the afterimage still seems to fill the room. Even in phantom form the fire&rsquo;s [[conspiratorial flames|terrible task]] haunt you.
 
 
 :: take the plunge
 You hardly notice when you toss the papers on the fire, only coming to when the crackling sound and the smell of your work strike you out of the disassociative stupor.
 
-Tentetnikov ever the fatalist is the first to go, going down with the ship as the first flames seductively coil themselves around the edges of the page. He hardly seems to react even as he's being pulled down, more interested in himself than in his surroundings. Surely he wonders to himself how his life could have been better, how this catastrophe could have been avoided, as he rationalizes that it's anyone's fault but his own. Perhaps just maybe had he had that wonderful teacher in his youth...
+Tentetnikov ever the fatalist is the first to go, going down with the ship as the first flames seductively coil themselves around the edges of the page. He hardly seems to react even as he&rsquo;s being pulled down, more interested in himself than in his surroundings. Surely he wonders to himself how his life could have been better, how this catastrophe could have been avoided, as he rationalizes that it&rsquo;s anyone&rsquo;s fault but his own. Perhaps just maybe had he had that wonderful teacher in his youth...
 
 The question remains unanswered as his face drops below the flames. What could have been burns as well as what is. The fire consumes Tentetnikov, his teacher, and his unwritten work [[together]].
 
 
 :: together
-After a sequence of generals and daughters and landowners through which you can hardly pay attention comes Kostanjoglo, the scientist-farmer, so busy planning his estate&mdash;eyes down that is on the earth&mdash;that he hadn't even noticed the fire until the first flame snatches him. Now he looks up in shock the plans on his desk already reduced to a pile of ash. All around him his crops are burning with their smoke smudging out the next words on the page you hold in your hand.
+After a sequence of generals and daughters and landowners through which you can hardly pay attention comes Kostanjoglo, the scientist-farmer, so busy planning his estate&mdash;eyes down that is on the earth&mdash;that he hadn&rsquo;t even noticed the fire until the first flame snatches him. Now he looks up in shock the plans on his desk already reduced to a pile of ash. All around him his crops are burning with their smoke smudging out the next words on the page you hold in your hand.
 
 He rushes out to organize his serfs only to find that they are already burned, their village so far gone not even ashes remain to tell where it once stood. Indeed in another moment with the immolation of Kostanjoglo himself perhaps there will stand no further record that there ever [[once existed|Murazov]] such a man in this world.
 
 
 :: Murazov
-Long before you actually reach him the voice of Murazov has been quietly pleading with you to stop, to rethink things. His voice is one half of the argument which has played itself out in your head without stop since Father Matvei left last night, assuring you that he knows what a good man you could be, to forget your plot&mdash;you know, he implores you, that you won't find peace in that, your enemy, your tempter, your betrayer.
+Long before you actually reach him the voice of Murazov has been quietly pleading with you to stop, to rethink things. His voice is one half of the argument which has played itself out in your head without stop since Father Matvei left last night, assuring you that he knows what a good man you could be, to forget your plot&mdash;you know, he implores you, that you won&rsquo;t find peace in that, your enemy, your tempter, your betrayer.
 
-And indeed, Father Matvei's voice seems now so very soft where only a few minutes ago his commands made all the world ring. But your hands move mechanically and continue to feed the fire not anymore of your own accord but quite automatically. Murazov's voice too now grows softer under the load of the papers taken alight all around him, quite indistinct when surrounded by all the flame and smoke of Navarino.
+And indeed, Father Matvei&rsquo;s voice seems now so very soft where only a few minutes ago his commands made all the world ring. But your hands move mechanically and continue to feed the fire not anymore of your own accord but quite automatically. Murazov&rsquo;s voice too now grows softer under the load of the papers taken alight all around him, quite indistinct when surrounded by all the flame and smoke of Navarino.
 
 As at last his features become obscured by the fire you realize that in the end you never knew much about Murazov [[at all]].
 
@@ -427,6 +427,6 @@ Nine days from now, you will die, but for now [[sleep will not come]].
 
 
 :: sleep will not come
-<<timedinsert 1s>>Anything can happen to a man: the fiery youth of today would recoil in horror if one were to show him his portrait in old age. So, as you pass from the tender years of youth into harsh and embittered manhood, make sure you take with you on your journey all the human emotions! Don't leave them on the road, for you will not pick them up afterwards! Old age, inevitable and inescapable, is terrible and menacing, for it never gives anything back, it returns nothing! The grave is more merciful than old age. On the tomb is written: &lsquo;Here Lies a Man&rsquo;, but you can read nothing on the cold and callous features of inhuman old age.<<endtimedinsert>>
+<<timedinsert 1s>>Anything can happen to a man: the fiery youth of today would recoil in horror if one were to show him his portrait in old age. So, as you pass from the tender years of youth into harsh and embittered manhood, make sure you take with you on your journey all the human emotions! Don&rsquo;t leave them on the road, for you will not pick them up afterwards! Old age, inevitable and inescapable, is terrible and menacing, for it never gives anything back, it returns nothing! The grave is more merciful than old age. On the tomb is written: &lsquo;Here Lies a Man&rsquo;, but you can read nothing on the cold and callous features of inhuman old age.<<endtimedinsert>>
 
 
