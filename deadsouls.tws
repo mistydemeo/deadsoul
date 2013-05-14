@@ -438,7 +438,7 @@ sg29
 (lp141
 sbsa(dp142
 g12
-I00
+I01
 sg13
 (lp143
 I10
@@ -449,7 +449,7 @@ Tiddler
 p144
 (dp145
 g18
-VHundreds of carefully handwritten pages arranged in a thick loose pile weigh down your guilty hands. The ink swirls across your vision, and you close your eyes as though that would carry it away. The cool sharp texture of the paper seems to crawl in your hands, desperate from some kind of escape from [[its impending fate|You fail.]].
+VHundreds of carefully handwritten pages arranged in a thick loose pile weigh down your guilty hands. The ink swirls across your vision, and you close your eyes as though that would carry it away. The cool sharp texture of the paper seems to crawl in your hands, desperate for some kind of escape from [[its impending fate|You fail.]].
 p146
 sg20
 g21
@@ -771,7 +771,7 @@ sg29
 (lp240
 sbsa(dp241
 g12
-I01
+I00
 sg13
 (lp242
 F570.0
