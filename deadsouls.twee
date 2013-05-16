@@ -77,21 +77,6 @@ body
 	z-index: 1;
 	background-color: transparent;
 	opacity: 0.4;
-
-	/* This will be used when the fire is destroyed */
-	transition: 1s;
-	-webkit-transition: 1s;
-}
-
-.zero-opacity
-{
-	opacity: 0 !important;
-	z-index: -10;
-}
-
-.paused
-{
-	animation-play-state: paused;
 }
 
 @keyframes red-fade
@@ -392,8 +377,12 @@ window.create_fire = function()
 window.destroy_fire = function()
 {
 	flaming = jQuery('.flaming');
-	flaming.addClass('paused');
-	flaming.addClass('zero-opacity');
+	opts = {
+		duration: 1000,
+		easing: 'linear',
+		complete: function() { flaming.remove(); }
+	};
+	flaming.fadeOut(opts);
 }
 
 
