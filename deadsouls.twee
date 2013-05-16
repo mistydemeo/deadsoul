@@ -44,6 +44,7 @@ body
 
 	animation: red-fade 4s ease 0s infinite alternate;
 	-webkit-animation: red-fade 4s ease 0s infinite alternate;
+	position: fixed;
 }
 
 .orange
@@ -64,11 +65,11 @@ body
 	);
 	animation: orange-fade 1s ease 0s infinite alternate;
 	-webkit-animation: orange-fade 1s ease 0s infinite alternate;
+	position: fixed;
 }
 
 .flaming
 {
-	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -380,6 +381,10 @@ The flames&rsquo; seductive reassurances contrast in your mind with the stern or
 :: Fire scripts [script]
 window.create_fire = function()
 {
+	// So the player can't recreate fire elements by stepping
+	// back then going forward again
+	if (jQuery('.flaming').length != 0) { return; }
+
 	jQuery('body').append("<div class='red flaming'></div>");
 	jQuery('body').append("<div class='orange flaming'></div>");
 }
